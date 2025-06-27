@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int sum1TOn(int n);
+
+int main() {
+    int n;
+    cout<<"Enter number:";
+    cin>>n;
+
+    int sum=sum1TOn(n);
+
+    cout<<"Sum of 1 to  "<<n<<" is : "<<sum;
+
+ return 0;
+}
+
+int sum1TOn(int n){
+    if(n==0){
+        return 0;
+    }
+    return n+sum1TOn(n-1);
+}
